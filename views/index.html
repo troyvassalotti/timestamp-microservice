@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Timestamp Microservice</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header>
+      <h1>Timestamp Microservice</h1>
+      <p>So, you need to know the current time in UTC or Unix formats (or <em>some point</em> in time)?</p>
+    </header>
+    <main>
+      <h2>How to use me:</h2>
+      <ol>
+        <li>If you want the current time, make a request to <a href="api/timestamp">/api/timestamp</a>.</li>
+        <li>If you want a specific time, make a request to /api/timestamp/<span class="bold">:date</span> where <span class="bold">:date</span> is a valid date of your choosing.</li>
+      </ol>
+      <div class="examples">
+        <h3>Example Usage:</h3>
+        <ul>
+          <li><a href="api/timestamp/2015-12-25">/api/timestamp/2015-12-25</a></li>
+          <li><a href="api/timestamp/1451001600000">/api/timestamp/1451001600000</a></li>
+          <li><a href="api/timestamp/thisisinvalid">/api/timestamp/thisisinvalid</a></li>
+        </ul>
+        <h3>Example Output:</h3>
+        <p>
+          If your date is <span class="bold">valid:</span> <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
+        </p>
+        <p>
+          If your date is <span class="bold">invalid:</span> <code>{"error":"Invalid Date"}</code>
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
